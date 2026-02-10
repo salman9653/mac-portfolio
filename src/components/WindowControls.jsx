@@ -5,9 +5,14 @@ const WindowControls = ({ target }) => {
 
   return (
     <div id="window-controls">
-      <div className="close" onClick={() => closeWindow(target)} />
-      <div className="minimize" />
-      <div className="maximize" />
+      <button
+        id="closeBtn"
+        type="button"
+        className="close"
+        onClick={() => closeWindow(target)}
+      />
+      <button id="minimizeBtn" type="button" className="minimize" />
+      <button id="maximizeBtn" type="button" className="maximize" />
     </div>
   );
 };
