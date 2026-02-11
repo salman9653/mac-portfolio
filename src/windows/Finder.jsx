@@ -8,6 +8,8 @@ import { Search } from "lucide-react";
 const Finder = () => {
   const { activeLocation, setActiveLocation } = useFinderLocationStore();
 
+  const openItem = (item) => {};
+
   const renderList = (listName, listItems) => (
     <div>
       <h3>{listName}</h3>
@@ -37,8 +39,20 @@ const Finder = () => {
       <div className="flex h-full bg-white">
         <div className="sidebar">
           {renderList("Favorites", Object.values(locations))}
-          {renderList("Work", locations.work.children)}
+          {renderList("My Projects", locations.work.children)}
         </div>
+        <ul className="content">
+          {activeLocation.children?.map((item) => (
+            <li
+              key={item.id}
+              className={item.position}
+              onClick={() => openItem(item)}
+            >
+              <img src={item.icon} alt={item.name} />
+              <p>{item.name}</p>
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   );
