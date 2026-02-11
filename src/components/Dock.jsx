@@ -1,5 +1,6 @@
-import { dockApps } from "@constants";
+import { dockApps, locations } from "@constants";
 import { useGSAP } from "@gsap/react";
+import useFinderLocationStore from "@store/finderLocation";
 import useWindowStore from "@store/window";
 import gsap from "gsap";
 import { useRef } from "react";
@@ -7,7 +8,7 @@ import { Tooltip } from "react-tooltip";
 
 const Dock = () => {
   const { openWindow, closeWindow, windows } = useWindowStore();
-
+  const { setActiveLocation } = useFinderLocationStore();
   const docRef = useRef(null);
 
   useGSAP(() => {
@@ -62,7 +63,7 @@ const Dock = () => {
   const toogleApp = ({ id, canOpen }) => {
     if (!canOpen) return;
 
-    const window = windows[id];
+    let window = id === "trash" ? windows["finder"] : windows[id];
 
     if (!window) {
       console.error(`Window not found for app: ${id}`);
@@ -72,10 +73,13 @@ const Dock = () => {
     if (window.isOpen) {
       closeWindow(id);
     } else {
-      openWindow(id);
+      if (id === "trash") {
+        setActiveLocation(locations.trash);
+        openWindow("finder");
+      } else {
+        openWindow(id);
+      }
     }
-
-    console.log(windows);
   };
 
   return (

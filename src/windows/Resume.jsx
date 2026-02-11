@@ -39,19 +39,28 @@ const Resume = () => {
           <Download className="icon" />
         </a>
       </div>
-      <div className="flex items-center justify-evenly bg-gray-200/50 shadow-md p-1 font-semibold">
-        <ChevronLeft
-          className="icon bg-gray-200 border border-gray-300 cursor-pointer"
+      <div className="flex items-center justify-evenly bg-gray-100/80 border border-gray-100 shadow-md p-1">
+        <div
+          className="bg-gray-200/70 cursor-pointer rounded-sm flex items-center gap-1 pr-3 shadow-sm"
+          title="Previous Page"
           onClick={handlePreviousPage}
-        />
-        <p className="text-xs">
+        >
+          <ChevronLeft className="icon" />
+          <span className="text-sm">Prev</span>
+        </div>
+
+        <p className="text-xs font-semibold">
           Page {currentPage} of {numPages || "?"}
         </p>
 
-        <ChevronRight
-          className="icon bg-gray-200 border border-gray-300 cursor-pointer"
+        <div
+          className="bg-gray-200/70 cursor-pointer rounded-sm flex items-center gap-1 pl-3 shadow-sm"
+          title="Next Page"
           onClick={handleNextPage}
-        />
+        >
+          <span className="text-sm">Next</span>
+          <ChevronRight className="icon" />
+        </div>
       </div>
       <Document
         file="files/resume.pdf"

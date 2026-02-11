@@ -68,9 +68,9 @@ const dockApps = [
   },
   {
     id: "trash",
-    name: "Archive", // was "Trash"
+    name: "Trash", // was "Trash"
     icon: "images/trash.png",
-    canOpen: false,
+    canOpen: true,
   },
 ];
 
@@ -218,18 +218,18 @@ export {
 const WORK_LOCATION = {
   id: 1,
   type: "work",
-  name: "Work",
+  name: "Projects",
   icon: "/icons/work.svg",
   kind: "folder",
   children: [
     // ▶ Project 1
     {
       id: 5,
-      name: "Nike Ecommerce Website Application",
+      name: "Nike Ecommerce Website",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-5 left-0", // icon position inside Finder
-      windowPosition: "top-[5vh] left-5", // optional: Finder window position
+      windowPosition: "top-10 right-9", // optional: Finder window position
       children: [
         {
           id: 1,
@@ -282,7 +282,7 @@ const WORK_LOCATION = {
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-5 left-40",
-      windowPosition: "top-[20vh] left-7",
+      windowPosition: "top-50 right-12",
       children: [
         {
           id: 1,
@@ -335,7 +335,7 @@ const WORK_LOCATION = {
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-5 left-80",
-      windowPosition: "top-[33vh] left-7",
+      windowPosition: "top-90 right-12",
       children: [
         {
           id: 1,

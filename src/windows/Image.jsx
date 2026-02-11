@@ -1,7 +1,7 @@
 import { WindowControls } from "@components";
 import WindowWrapper from "@hoc/WindowWrapper";
 import useWindowStore from "@store/window";
-import { Download, Share2 } from "lucide-react";
+import { Edit, Share } from "lucide-react";
 
 const Image = () => {
   const { windows } = useWindowStore();
@@ -16,8 +16,8 @@ const Image = () => {
         <WindowControls target="imgfile" />
         <h2>{name}</h2>
         <div className="flex items-center gap-2">
-          <Share2 className="icon" />
-          <Download className="icon" />
+          <Edit className="icon" />
+          <Share className="icon" />
         </div>
       </div>
       <div className="p-5 space-y-6 bg-white">
