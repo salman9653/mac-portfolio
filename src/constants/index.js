@@ -486,8 +486,8 @@ const TRASH_LOCATION = {
 
 export const locations = {
   work: WORK_LOCATION,
-  about: ABOUT_LOCATION,
   resume: RESUME_LOCATION,
+  about: ABOUT_LOCATION,
   trash: TRASH_LOCATION,
 };
 
