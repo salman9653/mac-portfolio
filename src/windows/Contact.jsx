@@ -12,7 +12,7 @@ const Contact = () => {
 
       <div className="p-5 space-y-5">
         <img
-          src="/images/adrian.jpg"
+          src="/images/my-pic-3.jpg"
           alt="Salman"
           className="h-40 rounded-full mx-auto"
         />

@@ -101,28 +101,32 @@ const blogPosts = [
 
 const techStack = [
   {
-    category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript"],
+    category: "Languages",
+    items: ["JavaScript", "TypeScript", "HTML 5", "CSS 3","Node", "Python" ],
   },
   {
-    category: "Mobile",
-    items: ["React Native", "Expo"],
+    category: "Frameworks",
+    items: ["React.js","React Hooks","Redux", "Next.js", "Tailwind", "Bootstrap", "Shadcn"],
   },
   {
-    category: "Styling",
-    items: ["Tailwind CSS", "Sass", "CSS"],
+    category: "APIs",
+    items: ["REST full Services", "JSON Web tokens", "Axios", "Razorpay"],
   },
   {
-    category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
+    category: "Dev Tools",
+    items: ["Git", "GitHub", "Postman", "Figma", "Webpack", "NPM", "Babel"],
   },
   {
     category: "Database",
     items: ["MongoDB", "PostgreSQL"],
   },
   {
-    category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker"],
+    category: "Testing",
+    items: ["Jest", "React Testing Library",],
+  },
+  {
+    category: "Others",
+    items: ["Responsive Web Development", "Cross-Browser Compatibility", "Performance Optimization",]
   },
 ];
 
@@ -397,7 +401,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-5 left-0",
-      imageUrl: "/images/adrian.jpg",
+      imageUrl: "/images/my-pic.jpg",
     },
     {
       id: 2,
@@ -406,7 +410,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-5 left-40",
-      imageUrl: "/images/adrian-2.jpg",
+      imageUrl: "/images/my-pic-2.jpg",
     },
     {
       id: 3,
@@ -415,7 +419,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-5 left-80",
-      imageUrl: "/images/adrian-3.jpeg",
+      imageUrl: "/images/my-pic-3.jpg",
     },
     {
       id: 4,
@@ -425,9 +429,9 @@ const ABOUT_LOCATION = {
       fileType: "txt",
       position: "top-45 left-0",
       subtitle: "Meet the Developer Behind the Code",
-      image: "/images/adrian.jpg",
+      image: "/images/my-pic.jpg",
       description: [
-        "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
+        "Hey! I’m Salman 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
         "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
         "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
         "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
